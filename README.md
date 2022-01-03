@@ -9,3 +9,4 @@
 
 ### JPA
 - [Dialect](https://github.com/SeokHyeMin/TIL/blob/main/JPA/Dialect.md)
+- [영속성 관리](https://github.com/SeokHyeMin/TIL/blob/main/JPA/영속성관리.md)
