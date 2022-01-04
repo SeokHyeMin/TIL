@@ -2,11 +2,14 @@
 
 #### 공부 기록
 
-### Design Pattern 
+## Design Pattern 
 - [Singleton Pattern](https://github.com/SeokHyeMin/TIL/blob/main/Design%20Pattern/SingletonPattern.md)
 
 
 
-### JPA
+## JPA
 - [Dialect](https://github.com/SeokHyeMin/TIL/blob/main/JPA/Dialect.md)
 - [영속성 관리](https://github.com/SeokHyeMin/TIL/blob/main/JPA/영속성관리.md)
+
+## 자료구조와 알고리즘
+- [Big O](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Big%20O.md)
