@@ -4,61 +4,17 @@
 
 
 ### 📌 Bubble Sort
-- 버블정렬의 순서
+- ### 버블정렬의 순서
 1. 배열 내에서 연속된 두 항목을 가리킨다. 첫 번째 항목과 두 번째 항목을 비교한다.
 2. 두 항목의 순서가 뒤바뀌어 있으면(왼쪽 값이 오른쪽 값보다 크면) 두 항목을 교환한다.
 3. "포인터"를 오른쪽으로 옮긴다.
 4. 더 이상 교환하지 않을 때까지 1단계에서 3단계를 반복한다. (이 과정을 패스스루라고 부른다.)
-- 실제 구현 코드
-~~~java
-package sort;
-
-public class BubbleSort {
-
-    private static void bubbleSort(int arr[]){
-        bubbleSort(arr, arr.length-1);
-    }
-
-    private static void bubbleSort(int[] arr, int last) {
-
-        if(last > 0){
-            for(int i=1; i<=last; i++){
-                if(arr[i-1] > arr[i]){
-                    swap(arr, i-1, i);
-                }
-            }
-            bubbleSort(arr, last-1);
-        }
-    }
-
-    private static void swap(int[] arr, int i, int j) {
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
-    }
-
-    private static void print(int[] arr){
-        for (int i : arr) {
-            System.out.print(i +" ");
-        }
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-
-        int[] arr = {1,5,3,4,9,2};
-        print(arr);
-        bubbleSort(arr);
-        print(arr);
-    }
-
-}
-~~~
-- 이 정렬을 버블정렬이라고 부르는 이유는 각 패스스루 마다 정렬되지 않은 값 중 가장 큰 값, "버블"이 올바른 위치로 가게된다. (매 정렬 때 마다 가장 큰 값이 올바른 위치로 가게된다.)
+- [실제 구현 코드](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/BubbleSort.java)
+- 버블정렬이라고 부르는 이유는 각 패스스루 마다 정렬되지 않은 값 중 가장 큰 값, "버블"이 올바른 위치로 가게된다. (매 정렬 때 마다 가장 큰 값이 올바른 위치로 가게된다.)
 - 버블 정렬 알고리즘에 포함된 단계는 총 두 단계이다.
-    - 비교 : 어느 쪽이 더 큰지 두 수를 비교한다.
+    - **비교** : 어느 쪽이 더 큰지 두 수를 비교한다.
         - 배열의 원소가 5개인 경우 첫 번째 패스스루에서는 4번의 비교를, 두 번째는 3번의 비교를.. 결국 총 4+3+2+1 = 10번의 비교를 하게 된다.
-    - 교환(swap) : 정렬하기 위해 두 수를 교환한다.
+    - **교환(swap)** : 정렬하기 위해 두 수를 교환한다.
         - 교환 또한, 배열이 내림차순으로 정렬되어 있는 최악의 시나리오 일 경우에는 교환도 각각 4,3,2,1번씩 총 10번의 교환이 일어난다.
 - 만약 원소수가 20개인 배열이라면? 비교와 교환이 각각 190번씩 총 380단계이다.
 - **원소수가 증가할 수록 단계 수가 기하급수적으로 늘어나는 것을 알 수 있다.**
@@ -66,9 +22,7 @@ public class BubbleSort {
 - 따라서 빅 오 표기법에서는 버블 정렬의 효율성을 O(N<sup>2</sup>)이라 부른다.
 - O(N<sup>2</sup>)은 데이터가 증가할 때 단계수가 급격히 늘어나므로 비교적 비효율적인 알고리즘으로 간주된다.
 - 참고로 O(N<sup>2</sup>)을 이차시간이라고도 부른다.
-
-
-
+<hr>
 
 <br><br>
 -참조 : 누구나 자료구조와 알고리즘
