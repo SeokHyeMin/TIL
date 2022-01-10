@@ -26,6 +26,8 @@
 2. 데이터는 큐의 앞에서만 읽을 수 있다.(스택과 반대)
 3. 데이터는 큐의 앞에서만 삭제할 수 있다.(스택과 반대)
 
+✔️ [큐 구현 코드](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/Queue.java)
+
 
 
 <br><br>
