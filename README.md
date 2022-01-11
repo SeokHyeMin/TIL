@@ -18,6 +18,7 @@
 - [프록시](https://github.com/SeokHyeMin/TIL/blob/main/JPA/프록시.md)
 
 ## SPRING
+- [Bean Scope](https://github.com/SeokHyeMin/TIL/blob/main/Spring/Bean%20Scope.md)
 - [Spring](https://github.com/SeokHyeMin/TIL/blob/main/Spring/Spring.md)
 - [Spring MVC](https://github.com/SeokHyeMin/TIL/blob/main/Spring/Spring%20MVC.md)
 
