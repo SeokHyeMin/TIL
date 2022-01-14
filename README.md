@@ -28,4 +28,6 @@
 - [Sort](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Sort.md)
 - [Stack,Queue](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Stack과%20Queue.md)
 - [Hash](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Hash.md)
+- [Tree](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Tree.md)
+- [연결 리스트](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/연결리스트.md)
 - [재귀](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/재귀.md)
