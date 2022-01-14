@@ -51,7 +51,6 @@ class Tree{
             System.out.println(node.data);
         }
     }
-
 /*
      (1) 
   (2)   (3)
@@ -71,6 +70,6 @@ Postorder (Left, Right, Root) - 4 5 2 3 1
         Node n3 = t.makeNode(null, 3, null);
         Node n1 = t.makeNode(n2, 1, n3);
         t.setRoot(n1);
-        t.postorder(t.getRoot());
+        t.preorder(t.getRoot());
     }
 }
