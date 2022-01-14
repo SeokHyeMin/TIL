@@ -10,16 +10,21 @@
 - 각 노드의 자식은 0개,1개 또는 2개 이다.
 - 한 노드에 자식이 둘이면 한 자식은 부모보다 작은 값을, 다른 자식은 부모보다 큰 값을 가져야한다.
     - 부모 노드의 두 자식 모두 부모보다 작은 값을 가지거나, 큰 값을 가지면 이진트리가 아니다.
-- 이진 트리 검색
+
+#### Binary Search Tree
+✔️ [구현 코드](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/BinarySearchTree.java)
+- 트리 안의 데이터가 왼쪽 노드와 그 이하 자식 노드들은 현재 노드보다 모두 작아야하고, 오른쪽 노드와 그 이하 자식 노드들은 현재 노드보다 커야한다.
+- 예를 들어 루트 기준 왼쪽 노드와 그 자식 노드들은 루트보다 작아야하고, 루트 기준 오른쪽 노드와 그 자식 노드들은 루트보다 커야만 Binary Search Tree이다.
+- **검색**
     - 트리의 검색은 반드시 루트부터 시작한다.
     - 각 단계를 수행할 때 마다 값이 들어있을 남은 공간 중 반을 제거하기 때문에 이진 트리의 검색은 O(logN)이다.
-- 이진 트리 삽입
+- **삽입**
     - 삽입은 항상 검색에 한 단계가 더 추가된다.
     - 올바른 위치를 찾아서 삽입하는 단계가 하나 더 추가되는 것이기 때문이다.
     - 삽입은 logN + 1단계가 걸리므로 효율성은 O(logN)이다. (빅 오는 상수 무시)
 - 정렬된 배열은 검색에 O(logN), 삽입에 O(N)이 걸리는 반면에 이진 트리는 검색과 삽입 둘 다 O(logN)이다.
-- 데이터를 많이 변경할 애플리케이션이라면 중요하다.
-- 이진트리 삭제
+- **삭제**
+    - [삭제 코드](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/BinarySearchTree.java#L41)가 위의 두 경우보다 다소 복잡하다.
     - 삭제할 노드에 자식이 없으면 그냥 삭제한다.
     - 삭제할 노드에 자식이 하나면 노드를 삭제하고, 자식을 삭제된 노드가 있던 위치에 넣는다.
     - 자식이 둘인 노드를 삭제할 떄는 삭제된 노드를 후속자 노드로 대체한다.
@@ -27,14 +32,11 @@
         - 만약 후속자 노드에 오른쪽 자식이 있으면 후속자를 삭제된 노드가 있던 자리에 넣은 후, 후속자 노드의 오른쪽 자식을 후속자 노드의 원래 부모의 왼쪽 자식으로 넣는다.
     - 삭제에는 검색 한 번과 연결이 끊긴 자식을 처리하는 단계가 추가적으로 필요하기 때문에 삽입과 마찬가지로 O(logN)이다.
 
-#### Binary Search Tree
-- 트리 안의 데이터가 왼쪽 노드와 그 이하 자식 노드들은 현재 노드보다 모두 작아야하고, 오른쪽 노드와 그 이하 자식 노드들은 현재 노드보다 커야한다.
-- 예를 들어 루트 기준 왼쪽 노드와 그 자식 노드들은 루트보다 작아야하고, 루트 기준 오른쪽 노드와 그 자식 노드들은 루트보다 커야만 Binary Search Tree이다.
-
 #### **Binary Tree의 3가지 구현방법**
+✔️ [구현 코드](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/Tree.java)
 - 자료구조에서 모든 노드를 방문하는 과정을 자료 구조 순회라 한다.
 - 재귀는 순회를 수행하는 훌륭한 도구이다.
 - 트리 순회는 트리의 모든 노드를 방문하므로 O(N)이 걸린다.
-1. Inorder (Left, Root, Right) - 중위순회
-2. Preorder (Root, Left, Right) - 전위순회
-3. Postorder (Left, Right, Root) - 후위순회
+1. Inorder (Left, Root, Right) - [중위순회](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/Tree.java#L29)
+2. Preorder (Root, Left, Right) - [전위순회](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/Tree.java#L38)
+3. Postorder (Left, Right, Root) - [후위순회](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/Tree.java#L47)
