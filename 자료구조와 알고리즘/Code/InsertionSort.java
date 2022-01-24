@@ -11,7 +11,7 @@ class InsertionSort{
             while(j >= 0 && key < arr[j]){ 
                 //배열의 왼쪽 끝에 도달하지 않고, key값이 왼쪽값보다 작아야 while문 진행
                 arr[j+1] = arr[j];
-                j--; //key값가 그 다음 왼쪽의 값과 비교
+                j--; //key값과 그 다음 왼쪽의 값과 비교
             }
             arr[j+1] = key; //while문에서 마지막 j--을 해주기 때문에 j+1
 
