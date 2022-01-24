@@ -9,7 +9,7 @@ class InsertionSort{
             int j = i - 1; //key값과 비교할 왼쪽 인덱스
             
             while(j >= 0 && key < arr[j]){ 
-                //배열의 왼쪽 끝에 도달하지 않고, key값이 왼쪽값보다 작아야 while문 진행
+                //배열의 왼쪽 끝에 도달하지 않고, key값이 왼쪽값보다 작아야 while문 진행(key가 더 오른쪽에 있기 때문에)
                 arr[j+1] = arr[j];
                 j--; //key값과 그 다음 왼쪽의 값과 비교
             }
