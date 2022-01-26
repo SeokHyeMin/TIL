@@ -6,9 +6,11 @@
 - [Singleton Pattern](https://github.com/SeokHyeMin/TIL/blob/main/Design%20Pattern/SingletonPattern.md)
 
 ## JAVA
-- [자바의 정석](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석)
 - [객체](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/객체.md)
 - [객체지향](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/객체지향.md)
+
+📌 [자바의 정석](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석)
+
 
 
 ## JPA
