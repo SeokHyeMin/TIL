@@ -42,6 +42,32 @@
 3. Postorder (Left, Right, Root) - [후위순회](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/Tree.java#L47)
 
 
+##### **Tree 관련 알고리즘 문제**
+- [정렬이 되어있고, 고유한 정수로만 이루어진 배열을 이진검색 트리로 만들기](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/ArrayToBinarySearchTree.java)
+- [이진트리의 노드들을 각 레벨별로 LinkedList에 담는 알고리즘을 구현](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/BinaryTreeToLinkedList.java)하라.
+(예를 들어, 5개의 깊이를 가지는 트리라면 5개의 LinkedList를 만들어야한다.)
+
+
+
+
+
+## Heap
+### 힙이란?
+> 힙이란 최대값이나 최소값을 찾아내는 연산을 빠르게 하기 위해 고안된 **완전 이진트리를 기본**으로한 자료구조이다.
+
+### 힙에는 최소 힙(Min Heap)과 최대 힙(Max Heap) 이렇게 두 가지 Heap이 있다.
+#### **최소 힙(Min Heap)**
+최소 힙은 작은 값을 항상 위의 노드에 있게 해서 트리의 루트에는 가장 작은 값이 오도록 하는 것이다.
+
+#### **최대 힙(Max Heap)**
+최대 힙은 가장 큰 값이 맨 위에 오도록 모든 노드들은 자기 부모 노드가 자기 값보다 큰 값을 가지는 트리이다.
+
+- 근본적으로 두 힙의 원리는 같으므로 최소 힙만 알면 최대 힙은 숫자만 반대로 되어 있다고 생각하면 된다. 문자열을 하나씩 찾고, 또 다음 문자는 자식 노드에서 찾는다.
+
+
+## Trie(트라이)
+트라이는 특별히 문자열에서 검색을 빠르게 해주는 트리 구조이다.
+- 한 글자에 레벨 하나씩 가도록 하여 
 
 <br><br>
 참조 : 누구나 자료구조와 알고리즘
