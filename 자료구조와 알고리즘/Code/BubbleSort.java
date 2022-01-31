@@ -6,13 +6,13 @@ public class BubbleSort {
 
     private static void bubbleSort(int[] arr, int last) {
 
-        if(last > 0){
-            for(int i=1; i<=last; i++){
-                if(arr[i-1] > arr[i]){
-                    swap(arr, i-1, i);
+        if(last > 0){//배열의 크기 확인
+            for(int i=1; i<=last; i++){//last까지 반복하는 것 주의하자.
+                if(arr[i-1] > arr[i]){//이전값이 다음값보다 크면 
+                    swap(arr, i-1, i); //순서 교환
                 }
             }
-            bubbleSort(arr, last-1);
+            bubbleSort(arr, last-1); //제일 큰 값은 한 패스마다 정렬되므로, 배열의 크기를 1씩 줄여서 재귀호출.
         }
     }
 
