@@ -42,7 +42,7 @@
 3. Postorder (Left, Right, Root) - [후위순회](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/Tree.java#L47)
 
 
-##### **Tree 관련 알고리즘 문제**
+#### **Tree 관련 알고리즘 문제**
 - [정렬이 되어있고, 고유한 정수로만 이루어진 배열을 이진검색 트리로 만들기](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/ArrayToBinarySearchTree.java)
 - [이진트리의 노드들을 각 레벨별로 LinkedList에 담는 알고리즘을 구현](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/BinaryTreeToLinkedList.java)하라.
 (예를 들어, 5개의 깊이를 가지는 트리라면 5개의 LinkedList를 만들어야한다.)
