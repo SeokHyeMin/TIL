@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 class LinkedList{
     
     Node header; //header를 데이터가 아닌 연결 리스트의 시작을 알려주는 용도로 사용.
@@ -40,18 +42,58 @@ class LinkedList{
         }
         System.out.println(n.data);
     }
+
+    //중복값 버퍼대신 포인터 2개를 이용해서 삭제하기
+    void removeDups(){
+        Node n = header;
+        while(n != null && n.next != null){
+            //마지막 노드를 지웠을 경우 밑의 코드에서 n = n.next에서 n이 null이 되므로
+            //n!=null의 조건을 더 추가하지 않으면 에러가 나기 때문에 추가해주어야한다.
+            Node r = n;
+            while(r.next != null){
+                if(n.data == r.next.data){//중복값 찾은 경우
+                    r.next = r.next.next; //중복값 삭제
+                }else{//중복값 아닌 경우 다음으로
+                    r = r.next;
+                }
+            }
+            n = n.next;
+        }
+    }
+
+    //끝에서 k번째 값 찾기
+    Node kthToLast(Node first, int k){
+        Node n = first;
+        int total = 1;
+        while(n.next != null){//마지막 노드는 가지 않으므로 total의 초기값을 1로 설정
+            total++;
+            n=n.next;
+        }
+        n=first; //total을 알아내는 작업 후, n을 다시 처음으로 보낸다.
+        for(int i=1; i<total-k+1; i++){//n은 next로 가서 반환되므로 i를 1부터
+            n = n.next;
+        }
+        return n;
+    }
+
+    //재귀호출을 사용하여 끝에서 k번째 값 찾기
+    int kthToLast2(Node n, int k){
+        if(n == null){
+            return 0;
+        }
+
+        int count = kthToLast2(n.next, k) + 1;
+        if(count == k){
+            System.out.println(k + "th to last node is" + n.data);
+        }
+
+        return count;
+    }
 }
 public class LinkedListNode{
 
     public static void main(String[] args){
-        LinkedList ll = new LinkedList();
-        ll.append(1);
-        ll.append(2);
-        ll.append(3);
-        ll.append(4);
-        ll.retrieve();
-        ll.delete(1);
-        ll.retrieve();
+    
     }
 }
 
