@@ -29,6 +29,11 @@
 
 ✔️ [큐 구현 코드](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/Queue.java)
 
+### Deque(Double - Ended Queue)
+Queue의 변형으로, 한 쪽 끝으로만 추가/삭제할 수 있는 Queue와 달리, Dequeue(덱, 또는 디큐라고 읽는다.)은 양쪽 끝에 추가/삭제가 가능하다.
+- Dequeue의 조상은 Queue이며, 구현체로는 ArrayDeque와 LinkedList 등이 있다.
+- **덱은 스택과 큐를 하나로 합쳐놓은 것과 같으며 스택으로 사용할 수 있고, 큐로 사용할수도 있다.**
+
 
 
 <br><br>
