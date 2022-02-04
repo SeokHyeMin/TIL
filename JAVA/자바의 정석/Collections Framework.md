@@ -111,3 +111,39 @@ Queue인터페이스의 구현체 중의 하나로, 저장한 순서에 관계�
 Queue의 변형으로, 한 쪽 끝으로만 추가/삭제할 수 있는 Queue와 달리, Dequeue(덱, 또는 디큐라고 읽는다.)은 양쪽 끝에 추가/삭제가 가능하다.
 - Dequeue의 조상은 Queue이며, 구현체로는 ArrayDeque와 LinkedList 등이 있다.
 - **덱은 스택과 큐를 하나로 합쳐놓은 것과 같으며 스택으로 사용할 수 있고, 큐로 사용할수도 있다.**
+
+## Iterator, ListIterator, Enumeration
+Iterator, ListIterator, Enumeration은 모두 컬렉션에 저장된 요소를 접근하는데 사용되는 인터페이스이다. Enumeration은 Iterator의 구버전이며, ListIterator는 Iterator의 기능을 향상 시킨것이다.
+
+### ✔️ **Iterator**
+컬렉션에 저장된 각 요소에 접근하는 기능을 가진 Iterator인터페이스를 정의하고, Collection인터페이스에는 'Iterator(Iterator를 구현한 클래스의 인스턴스)'를 반환하는 iterator()를 정의하고 있다.
+~~~java
+    public interface Iterator{
+        boolean hasNext();
+        Object next();
+        void remove();
+    }
+
+    public interface Collection{
+        ...
+        public Iterator iterator();
+        ...
+    }
+~~~
+- iterator()는 Collection인터페이스에 정의된 메서드이므로, Collection 인터페이스의 자손인 List와 Set에도 포함되어 있다.
+- 그래서 List나 Set인터페이스를 구현하는 컬렉션은 iterator()가 각 컬렉션의 특징에 알맞게 작성되어 있다.
+
+|메서드|설명|
+|---------|----|
+|boolean hasNext()|읽어 올 요소가 남아있는지 확인한다. 있으면 true, 없으면 false를 반환한다.|
+|Object next()|다음 요소를 읽어온다. next()를 호출하기 전에 hasNext()를 호출해서 읽어 올 요소가 있는지 확인하는 것이 안전하다.|
+|void remove()|next()로 읽어 온 요소를 삭제한다. next()를 호출한 다음에 remove()를 호출해야한다.(선택적 기능)|
+
+### ✔️ **ListIterator와 Enumeration**
+Enumeration은 컬렉션 프레임워크가 만들어지기 이전에 사용하던 것으로 Iterator의 구버전이므로 가능하면 Itertor를 사용하자.
+
+ListIterator는 Iterator를 상속받아서 기능을 추가한 것으로, 컬렉션의 요소에 접근할 때 Iterator는 단방향으로만 이동할 수 있는데 반해 ListIterator는 양방향으로의 이동이 가능하다.
+다만, ArrayList나 LinkedList 같이 List 인터페이스를 구현한 컬렉션에서만 사용할 수 있다.
+> Enumerataion : Iterator의 구버전
+
+> ListIterator : Iterator에 양방향 조회기능 추가(List를 구현한 경우만 사용가능하다.), Iterator에 이전방향으로의 접근기능을 추가한 것이다.
