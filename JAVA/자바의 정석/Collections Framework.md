@@ -147,3 +147,59 @@ ListIterator는 Iterator를 상속받아서 기능을 추가한 것으로, 컬�
 > Enumerataion : Iterator의 구버전
 
 > ListIterator : Iterator에 양방향 조회기능 추가(List를 구현한 경우만 사용가능하다.), Iterator에 이전방향으로의 접근기능을 추가한 것이다.
+
+## Arrays
+Arrays클래스에는 배열을 다루는데 우용한 메서드가 정의되어 있다. 같은 기능의 메서드가 배열의 타입만 다르게 오버로딩되어 있어서 많아 보이지만, 실제로는 그리 많지 않다.
+
+#### **배열의 복사 - copyOf(), copyOfRange()**
+copyOf()는 배열 전체를, copyOfRange()는 배열의 일부를 복사해서 새로운 배열을 만들어 반환한다.
+- copyOfRange()에 지정된 범위의 끝은 포함되지 않는다.
+~~~java
+    int[] arr = {0,1,2,3,4}
+    int[] arr2 = Arrays.copyOf(arr, 3); //arr2={0,1,2}
+    int[] arr3 = Arrays.copyOfRange(arr, 2, 4); //arr3={2,3} 4는 불포함
+~~~
+#### **배열 채우기 - fill(), setAll()**
+fill()은 배열의 모든 요소를 지정된 값으로 채운다. setAll()은 배열을 채우는데 사용할 함수형 인터페이스를 매개변수로 받는다.
+~~~java
+    int[] arr = new int[5];
+    Arrays.fill(arr,9); //arr[9,9,9,9,9]
+    Arrays.setAll(arr, () -> (int)(Math.random()*5 + 1)); //arr=[1,5,2,1,1]
+~~~
+
+#### **배열의 정렬과 검색 - sort(), binarySearch()**
+sort()는 배열을 정렬할 때, 그리고 배열에 저장된 요소를 검색할 때는 binarySearch()를 사용한다.
+-  binarySearch()는 배열에서 지정된 값이 저장된 위치(index)를 찾아서 반환하는데, 반드시 배열이 **정렬된 상태이어야 올바른 결과**를 얻는다. (이진검색은 정렬됐을 경우만 사용가능.)
+- 또한, 검색한 값과 일치하는 요소들이 여러 개 있다면, 이 중에서 어떤 것의 위치가 반환될지 알 수 없다.
+
+#### **배열의 비교와 출력 - equals(), toString()**
+toString()은 배열의 모든 요소를 문자열로 편하게 출력할 수 있다.
+
+equals()는 두 배열에 저장된 모든 요소를 비교해서 같으면 true, 다르면 false를 반환한다.
+- toString()는 일차원 배열에만 사용할 수 있으며, 다차원 배열에는 deepToString()을 사용해야한다.
+- deepToString()은 배열의 모든 요소를 재귀적으로 접근해서 문자열을 구성하기 때문에 3차원 이상의 배열에서도 동작한다.
+- eqauls()도 일차원 배열에만 사용할 수 있으므로, 다차원 배열의 비교에는 deepEquals()를 사용해야한다.
+
+#### **배열을 List로 변환 - asList(Object... a)**
+asList()는 배열을 List에 담아서 반환한다. 매개변수의 타입이 가변인수라서 배열 생성없이 저장할 요소들만 나열하는 것도 가능하다.
+~~~java
+    List list = Arrays.asList(new Integer[]{1,2,3,4}); //list=[1,2,3,4]
+    List list = Arrays.asList(1,2,3,4); //list=[1,2,3,4]
+
+    //UnsupportedOperationException예외 발생
+    list.add(6);
+~~~
+
+📌 **주의할 점**
+asList()가 반환한 List는 크기를 변경할 수 없다. (추가, 또는 삭제가 불가능하다.)
+저장된 내용을 변경하는 것은 가능하며, 배열을 크기를 변경할 수 있는 List로 생성하고 싶다면 아래와 같이 하면 된다.
+~~~java
+    List list = new ArrayList(Arrays.asList(1,2,3,4));
+~~~
+
+#### **parallel(), spliterator(), stream()**
+'parallel()'로 시작하는 이름의 메서드들이 있는데, 이 메서드들은 보다 빠른 결과를 얻기 위해서 여러 쓰레드가 작업을 나누어 처리하도록 한다.
+
+spiterator()는 여러 쓰레드가 처리할 수 있게 하나의 작업을 여러 작업으로 나누는 Spliterator를 반환한다.
+
+stream()은 컬렉션을 스트림으로 변환한다.
