@@ -3,4 +3,5 @@
 
 - [Collections Framework](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/Collections%20Framework.md)
 - [객체지향 프로그래밍](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/객체지향%20프로그래밍.md)
-- [객체지향 프로그래밍2](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/객체지향%20프로그래밍2.md)
+- [객체지향 프로그래밍2-1](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/객체지향%20프로그래밍2-1.md)
+- [객체지향 프로그래밍2-2](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/객체지향%20프로그래밍2-1.md)
