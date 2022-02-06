@@ -117,6 +117,7 @@ class LinkedList{
         return true;
     }
 
+    //두 줄로 나눠서 해결하기
     Node Partition(Node n, int x){
         Node s1 = null;
         Node e1 = null;
@@ -152,6 +153,7 @@ class LinkedList{
         return s1; //이어준 후 앞줄을 반환하면 된다.
     }
 
+    //앞뒤로 붙이기
     Node Partition2(Node n, int x){
         Node head = n; //x보다 작으면 head앞으로
         Node tail = n;  //x보다 크거나 같으면 tail 뒤로 옮기자.

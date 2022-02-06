@@ -49,8 +49,8 @@ class Node{
 
 - LinkedList에 있는 노드들을 x값을 기준으로 값이 작은 것들은 왼쪽, 큰것들은 오른쪽으로 나누기(왼, 오만 나누지 그 안에서 하나하나 정렬하는것은 아님)
     -  x값은 오른쪽에서 제일 앞에 있어야하는 것은 아니다.
-    - [방법1 : 두 줄로 나눠서 해결하기.](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/LinkedListNode.java#L91)
-    - [방법2 : 앞뒤로 붙이기]
+    - [방법1 : 두 줄로 나눠서 해결하기.](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/LinkedListNode.java#L121)
+    - [방법2 : 앞뒤로 붙이기](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/LinkedListNode.java#L157)
         - 위의 방법은 포인터가 4개이므로 단순하게 여기서는 포인터를 2개만 사용해서 사용한다.
 <br><br>
 참조 : 누구나 자료구조와 알고리즘
