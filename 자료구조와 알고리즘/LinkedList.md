@@ -39,9 +39,18 @@ class Node{
 - 단방향 LinkedList의 끝에서 k번째 노드를 찾는 알고리즘
     - 방법1 : 연결리스트를 처음부터 끝까지 가면서 길이를 알아낸 후, 길이에서 찾고자 하는 인덱스의 값을 빼주고 1을 더해 원하는 값을 찾는 방법.
         - 1을 더하는 이유는 k가 1일때 맨 뒤의 노드를 꺼내도록 코드를 구현할 것이기 때문에 이를 생각하여 1을 더해주어야한다.
-    - 방법2 : 재귀호출을 사용하여 해결
+    - 방법2 : [재귀호출을 사용하여 해결]](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/LinkedListNode.java#L78)
+    - [방법3 : 포인터를 이용하여 해결](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/LinkedListNode.java#L91)
+        - p1,p2가 있을 때 p1을 p2보다 k만큼 뒤에 위치시키고, 각각 한 칸 씩 서로 이동하면p1이 null을 만났을 때(맨 끝 다음) p2는 뒤에서 k번째 노드에 위치하게 된다.
     
+- 단방향 LinkedList에서 [중간에 있는 노드를 삭제](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/LinkedListNode.java#L108)하시오.
+(단, 첫번째 노드가 어딨는지 모르고, 오직 삭제할 노드만 갖고 있다.)
+    - 삭제할 노드의 다음 노드를 삭제할 노드와 같게 만들어주고 그 다음 노드를 삭제하면 된다.
 
-
+- LinkedList에 있는 노드들을 x값을 기준으로 값이 작은 것들은 왼쪽, 큰것들은 오른쪽으로 나누기(왼, 오만 나누지 그 안에서 하나하나 정렬하는것은 아님)
+    -  x값은 오른쪽에서 제일 앞에 있어야하는 것은 아니다.
+    - [방법1 : 두 줄로 나눠서 해결하기.](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/LinkedListNode.java#L91)
+    - [방법2 : 앞뒤로 붙이기]
+        - 위의 방법은 포인터가 4개이므로 단순하게 여기서는 포인터를 2개만 사용해서 사용한다.
 <br><br>
 참조 : 누구나 자료구조와 알고리즘

@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 class LinkedList{
     
     Node header; //header를 데이터가 아닌 연결 리스트의 시작을 알려주는 용도로 사용.
@@ -89,11 +87,95 @@ class LinkedList{
 
         return count;
     }
+
+    Node kthToLast3(Node first, int k){
+       
+        Node p1 = first;
+        Node p2 = first;
+
+        for(int i=0; i<k; i++){
+            if(p1 == null) return null;
+            p1 = p1.next;
+        }
+
+        while(p1 != null){
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        return p2;
+    }
+
+    boolean deleteNode(Node n){
+        if(n==null || n.next == null){//마지막 노드일 경우 이 로직은 삭제불가.
+            return false;
+        }
+
+        Node next =  n.next;
+        n.data = next.data; //현재 데이터를 다음노드의 데이터로 변경
+        n.next = next.next; //현재 노드의 다음 주소가 다다음노드의 주소로 변경되므로 
+                            //복사한 다음노드는 자연스럽게 삭제됨.
+        return true;
+    }
+
+    Node Partition(Node n, int x){
+        Node s1 = null;
+        Node e1 = null;
+        Node s2 = null;
+        Node e2 = null;
+
+        while (n != null){
+            Node next = n.next;
+            n.next = null; //현재 노드의 다음 주소를 초기화 시킨다.
+            if(n.data < x){
+                if(s1 == null){
+                    s1 = n;
+                    e1 = s1;
+                }else{
+                    e1.next = n;
+                    e1 = n; //e1다음값에 n을 놓고 난 후 e1의 위치도 변경
+                }
+            }else{ //n.data >= x
+                if(s2 == null){
+                    s2 = n;
+                    e2 = s2;
+                }else{
+                    e2.next = n;
+                    e2 = n;
+                }
+            }
+            n = n.next;
+        }
+        if(s1 == null){//s1 즉, 첫번째 줄이 비어있으면 그냥 s2만 return
+            return s2;
+        }
+        e1.next = s2; //첫번째 줄 마지막 노드와 s2를 이어준다.
+        return s1; //이어준 후 앞줄을 반환하면 된다.
+    }
+
+    Node Partition2(Node n, int x){
+        Node head = n; //x보다 작으면 head앞으로
+        Node tail = n;  //x보다 크거나 같으면 tail 뒤로 옮기자.
+
+        while(n != null){
+            Node next = n.next; //n이 바뀔 수 있으니 next를 저장
+            if(n.data < x){//작은값이 들어오면 head 앞에 가야한다.
+                n.next = head; //내 다음 주소를 head로 하면 head앞에 간 것.
+                head = n; //앞에 붙었으니 이제 지금 head는 n이 된다.
+            }else{
+                tail.next = n;
+                tail = n; //마지막 노드가 tail이 되도록 하자.
+            }
+            n = next;
+        }
+        tail.next = null; //마지막에 붙은 노드에 다음 노드의 주소값이 
+                        //있을수도 있으므로 null로 비워주자.
+        return head;
+    }
 }
 public class LinkedListNode{
 
     public static void main(String[] args){
-    
+
     }
 }
 
