@@ -203,3 +203,35 @@ asList()가 반환한 List는 크기를 변경할 수 없다. (추가, 또는 �
 spiterator()는 여러 쓰레드가 처리할 수 있게 하나의 작업을 여러 작업으로 나누는 Spliterator를 반환한다.
 
 stream()은 컬렉션을 스트림으로 변환한다.
+
+## Comparator와 Comparable
+Arrays.sort()를 호출만 하면 컴퓨터가 알아서 배열을 정렬하는 것처럼 보이지만, 사실은 Character클래스의 Comparable의 구현에 의해 정렬되었던 것이다.
+- **Comparator와 Comparable은 모두 인터페이스**로 컬렉션을 정렬하는데 필요한 메서드를 정의하고 있다.
+-  Comparable을 구현하고 있는 클래스들은 같은 타입의 인스턴스끼리 서로 비교할 수 있는 클래스들, 주로 Integer와 같은 wrapper클래스와 String, Date, File과 같은 것들이며 기본적으로 오름차순, 즉 작은 값에서부터 큰 값의 순으로 정렬되도록 구현되어 있다.
+~~~java
+    /* Comparator와 Comparable 실제 소스*/
+    public interface Comparator{
+        int compare(Object o1, Object o2);
+        boolean equals(Object obj);
+    }
+
+    public interface Comparable{
+        public int compareTo(Object o);
+    }
+~~~
+- compare()와 compareTo()는 선언형태와 이름이 약간 다를 뿐 두 객체를 비교한다는 같은 기능을 목적으로 고안된 것이다.
+- compareTo()의 반환값은 int로, 비교하는 두 객체가 같으면 0, 비교하는 값보다 작으면 음수, 크면 양수를 반환하도록 구현해야한다.
+- 이와 마찬가지로 compare()도 객체를 비교해서 음수, 0, 양수 중의 하나를 반환하도록 구현해야한다.
+- Comparable을 구현한 클래스들이 기본적으로 오름차순으로 정렬되어 있지만, 내림차순으로 정렬한다던가 아니면 다른 기준에 의해서 정렬되도록 하고 싶을 때 Comparator를 구현해서 정렬기준을 제공할 수 있다.
+> Comparable : 기본 정렬기준을 구현하는데 사용
+> Comparator : 기본 정렬기준 외에 다른 기준으로 정렬하고자할 때 사용한다.
+
+## HashSet
+HashSet은 Set인터페이스를 구현한 가장 대표적인 컬렉션이다.
+- Set인터페이스의 특징대로 HashSet은 중복된 요소를 저장하지 않는다.
+- 저장순서를 유지하지 않으므로 **중복을 제거하는 동시에 저장한 순서를 유지히고자 한다면 LinkedHashSet을 사용**해야한다.
+- add메서드나 addAll 메서드를 사용해서 데이터를 추가하는데, 객체를 추가할 때 HashSet에 이미 같은 객체가 있으면 중복으로 간주하고 더 저장하지 않는다.(false반환)
+
+> HashSet의 add메서드는 새로운 요소를 추가하기 전에 기존에 저장된 요소와 같은 것인지 판별하기 위해 추가하려는 요소의 equals()와 hashCode()를 호출하기 때문에 equals()와 hashCode()를 목적에 맞게 오버라이딩하여 쓰면된다.
+
+> 두 객체에 대해 equals메서드를 호출한 결과가 true이면, 두 객체의 해시코드는 반드시 같아야하지만, 두 객체의 해시코드가 같다고 해서 equals메서드의 호출결과가 반드시 true이어야 하는 것은 아니다.
