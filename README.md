@@ -35,5 +35,5 @@
 - [Stack,Queue](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Stack과%20Queue.md)
 - [Hash](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Hash.md)
 - [Tree](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Tree.md)
-- [LinkedList]](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/LinkedList.md)
+- [LinkedList](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/LinkedList.md)
 - [재귀](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/재귀.md)
