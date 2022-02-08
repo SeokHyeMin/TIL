@@ -252,3 +252,9 @@ TreeSet은 이진 검색 트리(binary search tree)라는 자료구조의 형태
 - 중복된 값을 저장하지 못한다.
 
 > 참고로 문자열의 경우 정렬순서는 문자의 코드값이 기준이 되므로, 오름차순의 정렬의 경우 코드값의 크기가 작은 순서에서 큰 순서, 공백, 숫자, 대문자, 소문자 순으로 정렬되고 내림차순의 경우 반대이다.
+
+## HashMap과 Hashtable
+Hashtable과 HashMap의 관계는 Vector와 ArrayList의 관계와 같아서 Hashtable보다는 **HashMap을 사용할 것을 권장한다.**
+- HashMap은 Map을 구현한 것이다.
+- Map의 특징인 키(key)와 값(value)을 묶어서 하나의 데이터(entry)로 저장한다는 특징을 갖는다.
+- 해싱(hashing)을 사용하기 때문에 많은 양의 데이터를 검색하는데 있어서 뛰어난 성능을 보인다.
