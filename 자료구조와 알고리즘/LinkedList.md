@@ -39,7 +39,7 @@ class Node{
 - 단방향 LinkedList의 끝에서 k번째 노드를 찾는 알고리즘
     - 방법1 : 연결리스트를 처음부터 끝까지 가면서 길이를 알아낸 후, 길이에서 찾고자 하는 인덱스의 값을 빼주고 1을 더해 원하는 값을 찾는 방법.
         - 1을 더하는 이유는 k가 1일때 맨 뒤의 노드를 꺼내도록 코드를 구현할 것이기 때문에 이를 생각하여 1을 더해주어야한다.
-    - 방법2 : [재귀호출을 사용하여 해결]](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/LinkedListNode.java#L78)
+    - 방법2 : [재귀호출을 사용하여 해결](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/LinkedListNode.java#L78)
     - [방법3 : 포인터를 이용하여 해결](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/LinkedListNode.java#L91)
         - p1,p2가 있을 때 p1을 p2보다 k만큼 뒤에 위치시키고, 각각 한 칸 씩 서로 이동하면p1이 null을 만났을 때(맨 끝 다음) p2는 뒤에서 k번째 노드에 위치하게 된다.
     
