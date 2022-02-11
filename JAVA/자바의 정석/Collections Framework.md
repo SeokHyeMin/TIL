@@ -280,3 +280,13 @@ Hashtable과 HashMap의 관계는 Vector와 ArrayList의 관계와 같아서 Has
 - 그래서 해싱을 구현하는 과정에서 제일 중요한 것은 해시함수의 알고리즘이다.
 - 실제로는 HashMap과 같이 해싱을 구현한 클래스에서는 Object클래스에 정의된 hashCode()를 해시함수로 사용한다.
 - Object클래스에 정의 hashCode()함수는 객체의 주소를 이용하는 알고리즘으로 해시코드를 만들어 내기 때문에 모든 객체에 대해 hashCode()를 호출한 결과가 서로 유일한 휼륭한 방법이다.
+
+## TreeMap
+TreeMap은 이름에서 알 수 있듯이 이진검색트리의 형태로 키와 값의 쌍으로 이루어진 데이터를 저장한다. 그래서 검색과 정렬에 적합한 컬렉션 클래스이다.
+- 검색한 관한한 대부분의 경우에서 HashMap이 TreeMap보다 더 뛰어 나므로 HashMap을 사용하는 것이 좋다.
+- 다만 범위검색이나 정렬이 필요한 경우에는 TreeMap을 사용하자.
+
+## Properties
+Properties는 HashMap의 구버전인 Hashtable을 상속받아 구현한 것, Hashtable은 키와 값을 (Object, Object)의 형태로 저장하는데 비해 Properties는 (String, String)의 형태로 저장하는 것 보다 단순화된 컬렉션 클래스이다.
+- 애플리케이션의 환경설정과 관련 속성(property)을 저장하는데 사용되며 데이터를 파일로부터 읽고 쓰는 편리한 기능을 제공한다.
+- 간단한 입출력은 Properties를 활용하면 몇 줄의 코드로 쉽게 해결될 수 있다.
