@@ -140,7 +140,8 @@
 
 
 <hr>
-### heap sort
+
+### Heap sort
 
 
 <br><br>
