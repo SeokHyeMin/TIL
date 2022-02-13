@@ -237,7 +237,7 @@ HashSet은 Set인터페이스를 구현한 가장 대표적인 컬렉션이다.
 > 두 객체에 대해 equals메서드를 호출한 결과가 true이면, 두 객체의 해시코드는 반드시 같아야하지만, 두 객체의 해시코드가 같다고 해서 equals메서드의 호출결과가 반드시 true이어야 하는 것은 아니다.
 
 ## TreeSet
-TreeSet은 이진 검색 트리(binary search tree)라는 자료구조의 형태로 데이터를 저장하는 컬렉션 클래스이다.
+TreeSet은 **이진 검색 트리(binary search tree)라는 자료구조의 형태로 데이터**를 저장하는 컬렉션 클래스이다.
 - 이진 검색 트리는 정렬, 검색, 범위검색(range search)에 높은 성능을 보이는 자료구조이다.
 - TreeSet은 이진 검색 트리의 성능을 향상 시킨 '레드-블랙-트리(Red-Black tree)'로 구현되어 있다.
 - 이진 검색 트리는 부모노드의 왼쪽에선 부모노드의 값보다 작은 값의 자식 노드를 오른쪽에는 큰 값의 자식노드를 저장하는 이진 트리이다.
@@ -290,3 +290,24 @@ TreeMap은 이름에서 알 수 있듯이 이진검색트리의 형태로 키와
 Properties는 HashMap의 구버전인 Hashtable을 상속받아 구현한 것, Hashtable은 키와 값을 (Object, Object)의 형태로 저장하는데 비해 Properties는 (String, String)의 형태로 저장하는 것 보다 단순화된 컬렉션 클래스이다.
 - 애플리케이션의 환경설정과 관련 속성(property)을 저장하는데 사용되며 데이터를 파일로부터 읽고 쓰는 편리한 기능을 제공한다.
 - 간단한 입출력은 Properties를 활용하면 몇 줄의 코드로 쉽게 해결될 수 있다.
+
+## Collections
+Arrays가 배열과 관련된 메서드를 제공하는 것처럼, Collections는 컬렉션과 관련된 메서드를 제공하고 있다.
+
+### **컬렉션의 동기화**
+멀티 쓰레드(multi-thread) 프로그래밍에서는 하나의 객체를 여러 쓰레드가 동시에 접근할 수 있기 때문에 데이터의 일관성(consistency)을 유지하지 위해서는 공유되는 객체에 동기화(synchronization)가 필요하다.
+- Vector와 Hashtable같은 구버전(JDK1.2 이전)의 클래스들은 자체적으로 동기화 처리가 되어 있는데, 멀티 쓰레드 프로그래밍이 아닌 경우에는 불필요한 기능이 되어 성능을 떨어뜨리는 요인이 된다.
+- 그래서 새로 추가된 ArrayList와 HashMap과 같은 컬렉션들은 동기화를 자체적으로 처리하지 않고 필요한 경우에만 java.uitl.Collections클래스의 동기화 메서드를 이용해서 동기화처리가 가능하도록 변경하였다.
+
+
+## 정리
+- ArrayList : 배열기반, 데이터의 추가와 삭제에 불리하지만 '순차적인' 추가삭제는 제일 빠르다. 임의의 요소에 대한 접근성이 뛰어나다.
+- LinkedList : 연결기반, 데이터의 추가와 삭제에 유리하다. 임의의 요소에 대한 접근성이 좋지 않다.
+- HashMap : 배열과 연결이 결합된 형태. 추가,삭제,검색,접근성이 모두 뛰어나다. 검색에는 최고성능을 보인다.
+- TreeMap : 연결기반, 정렬과 검색(특히 범위검색)에 적합하다. 검색성능은 HashMap보다 떨어진다.
+- Stack : Vector를 상속받아 구현한다.
+- Queue : LinkedList가 Queue인터페이스를 구현한다.
+- Properties : Hashtable을 상속받아 구현
+- HashSet : HashMap을 이용해서 구현한다.
+- TreeSet : TreeMap을 이용해서 구현한다.
+- LinkedHashMap, LinkedHashSet : HashMap과 HashSet에 저장순서유지기능을 추가한다.
