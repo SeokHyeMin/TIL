@@ -301,13 +301,13 @@ Arrays가 배열과 관련된 메서드를 제공하는 것처럼, Collections�
 
 
 ## 정리
-- ArrayList : 배열기반, 데이터의 추가와 삭제에 불리하지만 '순차적인' 추가삭제는 제일 빠르다. 임의의 요소에 대한 접근성이 뛰어나다.
-- LinkedList : 연결기반, 데이터의 추가와 삭제에 유리하다. 임의의 요소에 대한 접근성이 좋지 않다.
-- HashMap : 배열과 연결이 결합된 형태. 추가,삭제,검색,접근성이 모두 뛰어나다. 검색에는 최고성능을 보인다.
-- TreeMap : 연결기반, 정렬과 검색(특히 범위검색)에 적합하다. 검색성능은 HashMap보다 떨어진다.
-- Stack : Vector를 상속받아 구현한다.
-- Queue : LinkedList가 Queue인터페이스를 구현한다.
-- Properties : Hashtable을 상속받아 구현
-- HashSet : HashMap을 이용해서 구현한다.
-- TreeSet : TreeMap을 이용해서 구현한다.
-- LinkedHashMap, LinkedHashSet : HashMap과 HashSet에 저장순서유지기능을 추가한다.
+- **ArrayList** : 배열기반, 데이터의 추가와 삭제에 불리하지만 '순차적인' 추가삭제는 제일 빠르다. 임의의 요소에 대한 접근성이 뛰어나다.
+- **LinkedList** : 연결기반, 데이터의 추가와 삭제에 유리하다. 임의의 요소에 대한 접근성이 좋지 않다.
+- **HashMap** : 배열과 연결이 결합된 형태. 추가,삭제,검색,접근성이 모두 뛰어나다. 검색에는 최고성능을 보인다.
+- **TreeMap** : 연결기반, 정렬과 검색(특히 범위검색)에 적합하다. 검색성능은 HashMap보다 떨어진다.
+- **Stack** : Vector를 상속받아 구현한다.
+- **Queue** : LinkedList가 Queue인터페이스를 구현한다.
+- **Properties** : Hashtable을 상속받아 구현
+- **HashSet** : HashMap을 이용해서 구현한다.
+- **TreeSet** : TreeMap을 이용해서 구현한다.
+- **LinkedHashMap, LinkedHashSet** : HashMap과 HashSet에 저장순서유지기능을 추가한다.
