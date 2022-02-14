@@ -41,7 +41,7 @@ public class BinarySearchTree {
     private Node delete(Node root, int data){
         if(root == null) return root;
         if(data < root.data)
-            root.left = delete(root.left, data);
+            root.left = delete(root.left, data); //삭제하고 대체된 값을 이전 부모 노드와 연결시켜줘야한다.
         else if(data > root.data)
             root.right = delete(root.right, data);
         else{//삭제할 데이터를 찾은 경우
