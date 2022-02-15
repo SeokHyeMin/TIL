@@ -8,3 +8,4 @@
 - [예외처리](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/예외처리.md)
 - [람다와 스트림](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/람다와%20스트림.md)
 - [지네릭스](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/지네릭스.md)
+- [열거형(Enums)](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/열거형(enums).md)
