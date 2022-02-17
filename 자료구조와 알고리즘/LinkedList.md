@@ -29,6 +29,8 @@ class Node{
 - 한 링크는 다음 노드를 가리키고, 다른 한 링크는 **앞 노드**를 가리킨다.
 - 큐를 이중 연결리스트를 이용해서 구현하면 삽입과 삭제를 모두 O(1)에 할 수 있다.
 
+✔️ [이중 연결리스트 구현 코드](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/Code/DoublyLinkedList.java)
+
 ### LinkedList 관련 알고리즘 문제
 - 정렬되지 않은 LinkedList에서 중복값 삭제
     - 버퍼사용 O
