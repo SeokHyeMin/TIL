@@ -11,3 +11,4 @@
 - [지네릭스](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/지네릭스.md)
 - [열거형(Enums)](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/열거형(Enums).md)
 - [애너테이션](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/애너테이션.md)
+- [java.lang 패키지와 유용한 클래스](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/자바%20패키지와%20유용한%20클래스.md)
