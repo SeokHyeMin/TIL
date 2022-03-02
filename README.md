@@ -15,7 +15,7 @@
   - [객체지향 프로그래밍2-1](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/객체지향%20프로그래밍2-1.md)
   - [객체지향 프로그래밍2-2](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/객체지향%20프로그래밍2-2.md)
   - [예외처리](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/예외처리.md)
-  - [람다](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/람다와.md)
+  - [람다](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/람다.md)
   - [스트림](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/스트림.md)
   - [지네릭스](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/지네릭스.md)
   - [열거형(Enums)](https://github.com/SeokHyeMin/TIL/blob/main/JAVA/자바의%20정석/열거형(Enums).md)
