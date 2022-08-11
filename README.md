@@ -50,5 +50,5 @@
 
 ## Vue
 - [Vue](https://github.com/SeokHyeMin/TIL/blob/main/Vue/Vue.md)
-- Vuex
+- [Vuex](https://github.com/SeokHyeMin/TIL/blob/main/Vue/Vuex.md)
 - Vue CLI
