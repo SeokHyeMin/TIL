@@ -48,7 +48,10 @@
 - [LinkedList](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/LinkedList.md)
 - [재귀](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/재귀.md)
 
+## Javascript
+- [자바스크립트 타입](https://github.com/SeokHyeMin/TIL/blob/main/Javascript/자바스크립트%20타입.md)
+
 ## Vue
 - [Vue](https://github.com/SeokHyeMin/TIL/blob/main/Vue/Vue.md)
 - [Vuex](https://github.com/SeokHyeMin/TIL/blob/main/Vue/Vuex.md)
-- Vue CLI
+
