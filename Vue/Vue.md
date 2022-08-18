@@ -71,3 +71,19 @@ npm install vue-router
 - created : 뷰 인스턴스가 생성되자마자 실행할 로직을 정의하는 속성
 - watch : watch 속성은 모든 컴포넌트에 존재하는 속성으로, 화면을 다시 그리는데 중요한 역할을 한다.
     - 예를 들어, 인스턴스에 화면에 올라가고 나서 특정 data 속성을 바꾸거나 접근하면 watcher에서 해당 사실을 감지하고 watcher에서 다시 화면을 그리라는 신호를 보낸다.
+
+### ✔️ Vue에서 DOM을 접근하는 방법인 ref 속성
+
+```jsx
+<div ref="app" id="app">hello</div>
+
+// 동일한 역할을 하는 3개의 코드
+var divElement = document.getElementById('app');
+var divElement = document.querySelector('#app');
+var divElement = $('#app');
+
+// 위와 동일한 접근 방법이 Vue에서는 아래와 같다.
+var divElement = this.$refs.app;
+```
+
+- `ref`라는 속성을 주면 위의 코드처럼 접근이 가능하다.
