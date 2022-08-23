@@ -49,7 +49,9 @@
 - [재귀](https://github.com/SeokHyeMin/TIL/blob/main/자료구조와%20알고리즘/재귀.md)
 
 ## Javascript
+- [비동기처리](https://github.com/SeokHyeMin/TIL/blob/main/Javascript/비동기처리.md)
 - [자바스크립트 타입](https://github.com/SeokHyeMin/TIL/blob/main/Javascript/자바스크립트%20타입.md)
+- [Hoisiting](https://github.com/SeokHyeMin/TIL/blob/main/Javascript/Hoisting.md)
 
 ## Vue
 - [Vue](https://github.com/SeokHyeMin/TIL/blob/main/Vue/Vue.md)
