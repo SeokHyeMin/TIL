@@ -10,9 +10,10 @@ sum = sum + 1;
 function sumAllNumbers() {
 	//...
 }
-
 var i = 10;
 ```
+위와 같은 코드가 있을 때 자바와 달리 오류가 나지 않는다. 호이스팅 때문이다. 
+
 
 ```jsx
 // 1. 함수 선언식과 변수 선언을 hoisting
@@ -21,9 +22,9 @@ function sumAllNumbers() {
 	// ...
 }
 var i;
-
 // 2. 변수의 대입 및 할당
 sum = 5;
 sum = sum + i;
 i = 10;
 ```
+위 코드처럼 호이스팅으로 변수가 선언은 되기 때문에 오류가 나지 않는 것이다.
