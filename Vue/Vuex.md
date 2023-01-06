@@ -74,3 +74,7 @@
     popupMsg: 'clickBtn' // 컴포넌트 메서드 명 : Store의 뮤테이션 명
 })
 ```
+
+#### ✔️ Vuex를 클래스 형태로 만들어서 사용하기
+
+우리는 [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators)와 [vuex-class](https://github.com/ktsn/vuex-class)라는 라이브러리를 사용해서 store를 각각 namespace별로 모듈화 하여 분리하고, 각각의 스토어 모듈은 클래스 형태로 정의해서 쓸 수 있다.
