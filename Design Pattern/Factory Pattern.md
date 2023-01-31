@@ -19,3 +19,69 @@
 ➡️ 쉽게 말하면, 객체를 생성하기 위한 인터페이스를 먼저 정의하고, 어떤 클래스의 인스턴스를 만드는 것은 서브 클래스에서 결정하게 만드는 것이다. 
 
 (클래스의 인스턴스를 만드는 일을 서브 클래스에게 맡기는 것이다.)
+
+<br>
+
+✔️ 예제
+
+```java
+public interface Figure {
+	void draw();
+}
+```
+
+```java
+public class Circle implements Figure {
+
+    @Override
+    public void draw() {
+    	System.out.println("Circle의 draw 메소드");
+    }
+    
+}
+
+public class Square implements Figure {
+
+    @Override
+    public void draw() {
+    	System.out.println("Square의 draw 메소드");
+    }
+    
+}
+
+```
+
+```java
+public class FigureFactory {
+    public Figure getFigure(String figureType) {
+    	if(figureType == null) {
+            return null;
+        }
+        if(figureType.equalsIgnoreCase("CIRCLE") {
+            return new Circle();
+        } else if (figureType.equalsIgnoreCase("SQUARE") {
+            return new Square();
+        }
+        return null;
+    }
+    
+}
+
+public class FactoryPattern {
+    public static void main(String[] args) {
+        FigureFactory figureFactory = new FigureFactory();
+        
+        Figure fig1 = figureFactory.getFigure("CIRCLE");
+        
+        // Circle의 draw 메소드 호출
+        fig1.draw();
+
+        Figure fig2 = figureFactory.getFigure("SQUARE");
+        
+        // Square의 draw 메소드 호출
+        fig2.draw();
+    }
+}
+```
+
+팩토리 패턴의 단점은 새로 생성할 객체가 늘어날 때마다, Factory 클래스에 추가해야 되기 때문에 클래스가 많아진다.
